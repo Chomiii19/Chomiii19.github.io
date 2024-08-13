@@ -1,0 +1,396 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 80.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: #f6f6f6;
+  color: #0d0d0d;
+}
+
+header {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 9% 0.5rem;
+  background-color: #f6f6f6;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 2rem;
+  color: #6b2da8;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+nav a {
+  font-size: 1.7rem;
+  color: #161616;
+  margin-left: 3rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  display: inline-block;
+}
+
+nav a:hover {
+  color: #6b2da8;
+  border-bottom: 3px solid #6b2da8;
+}
+
+@media (max-width: 995px) {
+  nav {
+    position: absolute;
+    display: none;
+    top: 0;
+    right: 0;
+    width: 40%;
+    border-left: 3px solid #b74b4b;
+    border-bottom: 3px solid #b74b4b;
+    border-bottom-left-radius: 2rem;
+    padding: 1rem solid;
+    background-color: #161616;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+  }
+
+  nav a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
+
+  nav a:hover {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-bottom: 0.5rem solid #b74b4b;
+  }
+}
+
+section {
+  min-height: 100vh;
+  padding: 8rem 9% 5rem;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15rem;
+}
+
+.home-content h1.anim {
+  animation-delay: 0.5s;
+}
+
+.home-content h3.anim {
+  animation-delay: 1s;
+}
+
+.home .home-content h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+span {
+  color: #6b2da8;
+}
+
+.home-content h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.home-img img {
+  position: relative;
+  width: 25vw;
+  border-radius: 50%;
+  box-shadow: 0 0 25px solid #6b2da8;
+}
+
+.home-img.anim {
+  animation-delay: 2.5s;
+}
+
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  border: 0.2rem solid #6b2da8;
+  font-size: 2rem;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  color: #6b2da8;
+  margin: 4rem 2rem 3rem 0;
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: slideIn 0.5s ease-in-out forwards;
+  transition: transform 0.3s ease, background-color 0.3s ease,
+    box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #f6f6f6;
+  transform: scale(1.3) translateY(-5px) !important;
+  background-color: #6b2da8;
+  box-shadow: 0 0 25px #6b2da8;
+}
+
+.social-icons a:nth-child(1) {
+  animation-delay: 2s;
+}
+.social-icons a:nth-child(2) {
+  animation-delay: 2.3s;
+}
+.social-icons a:nth-child(3) {
+  animation-delay: 2.6s;
+}
+.social-icons a:nth-child(4) {
+  animation-delay: 2.9s;
+}
+.social-icons a:nth-child(5) {
+  animation-delay: 3.2s;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.contact-btn {
+  display: inline-block;
+  border-radius: 4rem;
+  color: black;
+  padding: 1rem 2.8rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.3rem;
+  background-color: #6b2da8;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+  color: #f6f6f6;
+  box-shadow: 0 0 25px #6b2da8;
+  transform: scale(1.1) translateY(-3px);
+}
+
+.contact-btn.anim {
+  animation-delay: 1.5s;
+}
+
+.typing-text {
+  font-size: 25px;
+  font-weight: 600;
+  min-width: 280px;
+}
+
+.typing-text span {
+  position: relative;
+}
+
+.typing-text span::before {
+  content: "Software Developer";
+  color: #6b2da8;
+  animation: words 20s infinite;
+}
+
+.typing-text span::after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  border-left: 3px solid #f6f6f6;
+  right: -8;
+  animation: cursor 0.8s infinite;
+}
+
+.anim {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: moveup 0.5s linear forwards;
+}
+
+@keyframes moveup {
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes cursor {
+  to {
+    border-left: 3px solid;
+  }
+}
+
+@keyframes words {
+  0%,
+  20% {
+    content: "Web Developer";
+  }
+  21%,
+  40% {
+    content: "Software Developer";
+  }
+  41%,
+  60% {
+    content: "Web Designer";
+  }
+  61%,
+  80% {
+    content: "Onii-chan";
+  }
+  81%,
+  100% {
+    content: "Content Creator";
+  }
+}
+
+@media (max-width: 1000px) {
+  .home {
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 995px) {
+  .home {
+    flex-direction: column;
+    margin: 5rem 4rem;
+  }
+
+  .home .home-content h3 {
+    font-size: 2.5rem;
+  }
+
+  .home-content h1 {
+    font-size: 5rem;
+  }
+
+  .home-img img {
+    width: 70vw;
+    margin-top: 4rem;
+  }
+}
+
+#section2 {
+  background-color: #6b2da8;
+}
+.about.reveal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+  color: #f6f6f6;
+}
+
+.about h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  border-bottom: 0.2rem solid #f6f6f6;
+}
+
+.about-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+}
+
+.about-img img {
+  width: 25vw;
+}
+
+.about-desc h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.about-desc h2 span {
+  color: #f6f6f6;
+}
+
+.about-desc p {
+  font-size: 1.2rem;
+}
+
+.skills {
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.skills h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  border-bottom: 0.2rem solid #6b2da8;
+  color: #6b2da8;
+  display: inline;
+}
+
+.skills-container {
+  display: absolute;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+.skills-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+}
+
+.skills h2 {
+  font-size: 20rem;
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.reveal.active {
+  transform: translateY(0px);
+  opacity: 1;
+}
